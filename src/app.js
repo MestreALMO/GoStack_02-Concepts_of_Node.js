@@ -16,7 +16,13 @@ app.get("/repositories", (request, response) => {
 app.post("/repositories", (request, response) => {
   const { title, url, techs } = request.body;
 
-  const repository = { id: uuid(), title: 'Desafio Node.js', url: 'http://github.com/...', techs: ["Node.js", "..."], likes: 0 };
+  const repository = { 
+    id: uuid(), 
+    title: 'Desafio Node.js', 
+    url: 'http://github.com/...', 
+    techs: ["Node.js", "..."], 
+    likes: 0 
+  };
 
   repositories.push(repository);
 
@@ -63,7 +69,27 @@ app.delete("/repositories/:id", (request, response) => {
 });
 
 app.post("/repositories/:id/like", (request, response) => {
-  // TODO
+  const { id } = request.params;
+
+  const repositoryIndex = repositories.findIndex(repository => repository.id === id);
+
+  if (repositoryIndex < 0) {
+    return response.status(400).json({ error: "Repository not found." });
+  }
+
+  const exemplo = repositories[repositoryIndex];
+
+  const repository = { 
+    id: exemplo.id, 
+    title: exemplo.title, 
+    url: exemplo.url, 
+    techs: exemplo.techs, 
+    likes: (exemplo.likes + 1) 
+  };
+
+  repositories[repositoryIndex] = repository;
+
+  return response.json(repository);
 });
 
 module.exports = app;
