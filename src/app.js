@@ -30,7 +30,7 @@ app.put("/repositories/:id", (request, response) => {
   // const repositoryIndex = repositories.findIndex(repository => repository.id === id);
 
   // if (repositoryIndex < 0) {
-  //   return response.status(400).json({ error: "Project not found." });
+  //   return response.status(400).json({ error: "Repository not found." });
   // }
 
   // const repository = {
@@ -43,7 +43,7 @@ app.put("/repositories/:id", (request, response) => {
 
   // repositories[repositoryIndex] = repository;
 
-  // return reponse.json(repository);
+  // return response.json(repository);
 });
 
 app.delete("/repositories/:id", (request, response) => {
