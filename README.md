@@ -1,6 +1,6 @@
 # GoStack_02-Concepts_of_Node.js
 
-This challenge objective was to create a node.js backend. The following should be completed: <br />
+**`This challenge objective was to create a node.js backend. The following should be completed:`** <br />
 
 - **`POST /repositories`**: The route must receive `title`, `URL`, and `techs` inside of the request body. The URL must be the link to the Github of that repository. When registering a new project, it must be stored inside an object in the following format: `{id:" uuid ", title: 'Desafio Node.js', URL: 'http: //github.com / ...' , techs: ["Node.js", "..."], likes: 0} `; Make sure the ID is a UUID, and always start likes as 0.
 
