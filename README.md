@@ -10,7 +10,9 @@ This challenge objective was to create a node.js backend. The following should b
 
 - **`DELETE /repositories/:id`**: The route must delete a repository with the `id` present in the route parameters;
 
-- **`POST /repositories/:id/like`**: The route must increase the number of likes from the specific repository chosen through the `id` param present in the route parameters, at each call of this route, the number of likes must be increased by 1; <br /> <br /> <br />
+- **`POST /repositories/:id/like`**: The route must increase the number of likes from the specific repository chosen through the `id` param present in the route parameters, at each call of this route, the number of likes must be increased by 1; 
+
+<strong>Every objective was reached! This a backend challenge so there aren't images for me to display.</strong> <br /> <br /> <br />
 
 
 [Original challenge page.](https://github.com/rocketseat-education/bootcamp-gostack-desafios/blob/master/desafio-conceitos-nodejs/README.en.md) <br />
